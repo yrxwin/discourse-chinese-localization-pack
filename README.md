@@ -21,7 +21,7 @@ Adding various support to login methods and share links. More incoming.
 
 分享链接：
 
-有部分服务的显示尚未有更好的解决办法。
+（有部分服务的显示尚未有更好的解决办法）
 
 - 微博（weibo）
 - 人人（renren）
@@ -48,9 +48,9 @@ Adding various support to login methods and share links. More incoming.
 
 ## 使用
 
-Go to Site Settings's basic category, add services in the share_links.
+进入站点设置的插件设置项里按照提示设置，或按照中文论坛的帮助贴。
 
-进入站点设置的基本设置分类，在share_links中添加服务。
+另外在 `share_links` 设置项中输入对应的名字（括号内）添加分享服务。
 
 ## 许可协议
 
@@ -72,6 +72,9 @@ GPLv2
 
 ### 迁移至 0.5 版本
 
+1. 从已有的设置项中抄录相关登录插件的 client id 和 secret。
+2. 将原有插件从 `app.yml` 中删除并安装该插件。
+3. 重新配置插件的各个项目以生效。
 
 <div style="display: none">
 
