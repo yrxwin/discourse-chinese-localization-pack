@@ -1,7 +1,7 @@
 class QQAuthenticator < ::Auth::Authenticator
 
   def name
-    'qq_connect'
+    'qq'
   end
 
   def after_authenticate(auth_token)
@@ -23,6 +23,7 @@ class QQAuthenticator < ::Auth::Authenticator
     result.name = name
     result.username = username
     result.extra_data = { qq_uid: qq_uid, raw_info: raw_info }
+    p raw_info, auth_token
 
     result
   end
