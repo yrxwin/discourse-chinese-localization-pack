@@ -30,7 +30,7 @@ PROVIDERS.each do |provider|
 end
 
 after_initialize do
-  return unless SiteSetting.zh_l10n_enabled
+  next unless SiteSetting.zh_l10n_enabled
 
   PROVIDERS.each do |provider|
     provider_name = provider[0].downcase
@@ -50,8 +50,8 @@ after_initialize do
   end
 
   DiscourseEvent.on(:site_setting_saved) do |site_setting|
-    if site_setting.name == SITE_SETTING_NAME && site_setting.value_changed? && site_setting.value == false
-      PROVIDERS.each { |provider| SiteSetting.public_send("#{PLUGIN_PREFIX}enable_#{provider.downcase}_logins", false) }
+    if site_setting.name == SITE_SETTING_NAME && site_setting.value_changed? && site_setting.value == "f" # false
+      PROVIDERS.each { |provider| SiteSetting.public_send("#{PLUGIN_PREFIX}enable_#{provider[0].downcase}_logins=", false) }
     end
   end
 end
