@@ -37,6 +37,7 @@ class WeiboAuthenticator < ::Auth::Authenticator
       strategy = env['omniauth.strategy']
       strategy.options[:client_id] = SiteSetting.zh_l10n_weibo_client_id
       strategy.options[:client_secret] = SiteSetting.zh_l10n_weibo_client_secret
+      strategy.options[:token_params] = { redirect_uri: "#{Discourse.base_url}/auth/weibo/callback" }
     }
   end
 end
