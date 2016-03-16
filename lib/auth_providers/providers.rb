@@ -1,0 +1,5 @@
+load File.expand_path('../oauth_gems.rb', __FILE__)
+load File.expand_path('../weibo.rb', __FILE__)
+load File.expand_path('../renren.rb', __FILE__)
+load File.expand_path('../douban.rb', __FILE__)
+load File.expand_path('../qq_connect.rb', __FILE__)

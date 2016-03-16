@@ -1,0 +1,17 @@
+# encoding: utf-8
+
+en:
+  js:
+    login:
+      weibo:
+        title: "with Weibo"
+        message: "Authenticating with Weibo (make sure pop up blockers are not enabled)"
+      renren:
+        title: "with Renren"
+        message: "Authenticating with Renren (make sure pop up blockers are not enabled)"
+      qq_connect:
+        title: "with QQ"
+        message: "Authenticating with QQ (make sure pop up blockers are not enabled)"
+      douban:
+        title: "with Douban"
+        message: "Authenticating with Douban (make sure pop up blockers are not enabled)"

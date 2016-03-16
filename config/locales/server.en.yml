@@ -1,0 +1,13 @@
+# encoding: utf-8
+
+en:
+  site_settings:
+    zh_i18n_enabled: "Enable Chinese localization pack. NOTE: requires restart."
+    weibo_client_id: "Client id for Weibo authentication, registered at http://open.weibo.com/"
+    weibo_client_secret: "Client secret for Weibo authentication, registered at http://open.weibo.com/"
+    renren_client_id: "Client id for Renren authentication, registered at http://dev.renren.com/website"
+    renren_client_secret: "Client secret for Renren authentication, registered at http://dev.renren.com/website"
+    qq_connect_client_id: "Client id for QQ authentication, registered at http://connect.qq.com/"
+    qq_connect_client_secret: "Client secret for QQ authentication, registered at http://connect.qq.com/"
+    douban_client_id: "Client id for Douban authentication, registered at http://developers.douban.com/"
+    douban_client_secret: "Client secret for Douban authentication, registered at http://developers.douban.com/"

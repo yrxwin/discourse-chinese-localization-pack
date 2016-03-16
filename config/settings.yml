@@ -1,0 +1,36 @@
+login:
+  weibo_client_id:
+    default: ''
+  weibo_client_secret:
+    default: ''
+  renren_client_id:
+    default: ''
+  renren_client_secret:
+    default: ''
+  qq_connect_client_id:
+    default: ''
+  qq_connect_client_secret:
+    default: ''
+  douban_client_id:
+    default: ''
+  douban_client_secret:
+    default: ''
+plugins:
+  zh_i18n_enabled:
+    default: true
+  zh_i18n_weibo_client_id:
+    default: ''
+  zh_i18n_weibo_client_secret:
+    default: ''
+  zh_i18n_renren_client_id:
+    default: ''
+  zh_i18n_renren_client_secret:
+    default: ''
+  zh_i18n_qq_connect_client_id:
+    default: ''
+  zh_i18n_qq_connect_client_secret:
+    default: ''
+  zh_i18n_douban_client_id:
+    default: ''
+  zh_i18n_douban_client_secret:
+    default: ''
