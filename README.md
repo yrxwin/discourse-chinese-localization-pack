@@ -1,14 +1,16 @@
-discourse-chinese-localization-pack
+Discourse 中文本地化服务集合
 ===================
 
 Adding various support to login methods and share links. More incoming.
 
 <strong>将随 Discourse 1.5 正式版取代原来的相关的插件。测试中</strong>
 
-- 该插件包含各国内服务的第三方登录（OAuth）功能。
-- 为 Discourse 添加分享到国内的服务的支持。微博和人人的支持。
+这是一个 Discourse 中文本地化插件的集合，一些特性适合增加到 [Discourse 的核心代码库][dsg]中，而这个插件专注于不适用于 Discourse 核心的功能。
 
-## 添加功能概况
+- 包含各国内服务的第三方登录（OAuth）功能。
+- 添加分享到国内的服务的支持。
+
+## 功能概况
 
 登录方法：
 
@@ -53,6 +55,23 @@ Go to Site Settings's basic category, add services in the share_links.
 ## 许可协议
 
 GPLv2
+
+## 贡献
+
+欢迎你参与这样本地化服务插件的开发，
+
+- 前往[中文论坛][discn]讨论任何可能的想法，尽可能地列举出具体的做法或详情。
+- 提交 Pull Request。
+- 修缮相关的翻译。
+
+## 发行注记
+
+| 版本 | 内容 | 迁移说明 |
+| --- | ------------- | ——————|
+| 0.5 | 将各个插件聚合而来 | # |
+
+### 迁移至 0.5 版本
+
 
 <div style="display: none">
 
@@ -293,3 +312,6 @@ Current version: 0.4.0
 0.4.0: 包含登录策略 gem，去掉下载外部 gem 的步骤。
 
 </div>
+
+[discn]: https://meta.discoursecn.org/
+[dsg]: https://github.com/discourse/discourse
