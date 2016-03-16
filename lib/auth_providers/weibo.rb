@@ -35,8 +35,8 @@ class WeiboAuthenticator < ::Auth::Authenticator
   def register_middleware(omniauth)
     omniauth.provider :weibo, :setup => lambda { |env|
       strategy = env['omniauth.strategy']
-      strategy.options[:client_id] = SiteSetting.weibo_client_id
-      strategy.options[:client_secret] = SiteSetting.weibo_client_secret
+      strategy.options[:client_id] = SiteSetting.zh_l10n_weibo_client_id
+      strategy.options[:client_secret] = SiteSetting.zh_l10n_weibo_client_secret
     }
   end
 end

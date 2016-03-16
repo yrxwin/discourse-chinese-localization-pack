@@ -35,8 +35,8 @@ class RenrenAuthenticator < ::Auth::Authenticator
   def register_middleware(omniauth)
     omniauth.provider :renren, :setup => lambda { |env|
       strategy = env['omniauth.strategy']
-      strategy.options[:client_id] = SiteSetting.renren_client_id
-      strategy.options[:client_secret] = SiteSetting.renren_client_secret
+      strategy.options[:client_id] = SiteSetting.zh_l10n_renren_client_id
+      strategy.options[:client_secret] = SiteSetting.zh_l10n_renren_client_secret
     }
   end
 end

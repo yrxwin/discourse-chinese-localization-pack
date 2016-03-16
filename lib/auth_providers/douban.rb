@@ -35,8 +35,8 @@ class DoubanAuthenticator < ::Auth::Authenticator
   def register_middleware(omniauth)
     omniauth.provider :douban, :setup => lambda { |env|
       strategy = env['omniauth.strategy']
-      strategy.options[:client_id] = SiteSetting.douban_client_id
-      strategy.options[:client_secret] = SiteSetting.douban_client_secret
+      strategy.options[:client_id] = SiteSetting.zh_l10n_douban_client_id
+      strategy.options[:client_secret] = SiteSetting.zh_l10n_douban_client_secret
     }
   end
 end

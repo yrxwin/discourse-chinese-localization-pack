@@ -1,7 +1,7 @@
 class QQAuthenticator < ::Auth::Authenticator
 
   def name
-    'qq'
+    'qq_connect'
   end
 
   def after_authenticate(auth_token)
@@ -23,7 +23,6 @@ class QQAuthenticator < ::Auth::Authenticator
     result.name = name
     result.username = username
     result.extra_data = { qq_uid: qq_uid, raw_info: raw_info }
-    p raw_info, auth_token
 
     result
   end
@@ -36,8 +35,8 @@ class QQAuthenticator < ::Auth::Authenticator
   def register_middleware(omniauth)
     omniauth.provider :qq_connect, :setup => lambda { |env|
       strategy = env['omniauth.strategy']
-      strategy.options[:client_id] = SiteSetting.qq_connect_client_id
-      strategy.options[:client_secret] = SiteSetting.qq_connect_client_secret
+      strategy.options[:client_id] = SiteSetting.zh_l10n_qq_client_id
+      strategy.options[:client_secret] = SiteSetting.zh_l10n_qq_client_secret
     }
   end
 end

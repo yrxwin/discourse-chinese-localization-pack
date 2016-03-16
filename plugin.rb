@@ -28,3 +28,22 @@ PROVIDERS.each do |provider|
                 background_color: provider[3]
 end
 
+after_initialize do
+  return unless SiteSetting.zh_l10n_enabled
+
+  PROVIDERS.each do |provider|
+    provider_name = provider[0].downcase
+    enable_setting = "#{PLUGIN_PREFIX}enable_#{provider_name}_logins"
+    next unless SiteSetting.public_send(enable_setting)
+
+    check = "#{provider_name}_config_check".to_sym
+    AdminDashboardData.define_singleton_method(check) do
+      if SiteSetting.public_send(enable_setting) && (
+          SiteSetting.public_send("#{PLUGIN_PREFIX}#{provider_name}_client_id").blank? ||
+          SiteSetting.public_send("#{PLUGIN_PREFIX}#{provider_name}_client_secret").blank?)
+        I18n.t("dashboard.#{PLUGIN_PREFIX}#{provider_name}_config_warning")
+      end
+    end
+    AdminDashboardData.add_problem_check check
+  end
+end

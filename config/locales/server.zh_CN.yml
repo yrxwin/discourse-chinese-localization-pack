@@ -3,11 +3,20 @@
 zh_CN:
   site_settings:
     zh_l10n_enabled: 启用中文本地化服务集合。注意：需要重新启动。
-    weibo_client_id: "微博帐号验证的客户端帐号（Client id），到 http://open.weibo.com/ 来注册获取"
-    weibo_client_secret: "微博帐号验证的客户端密码（Client secret），到 http://open.weibo.com/ 来注册获取"
-    renren_client_id: "人人帐号验证的客户端帐号（Client id），到 http://dev.renren.com/website 来注册获取"
-    renren_client_secret: "人人帐号验证的客户端密码（Client secret），到 http://dev.renren.com/website 来注册获取"
-    qq_connect_client_id: "QQ 帐号验证的客户端帐号（Client id），到 http://connect.qq.com/ 来注册获取"
-    qq_connect_client_secret: "QQ 帐号验证的客户端密码（Client secret），到 http://connect.qq.com/ 来注册获取"
-    douban_client_id: "豆瓣帐号验证的客户端帐号（Client id），到 http://developers.douban.com/ 来注册获取"
-    douban_client_secret: "豆瓣帐号验证的客户端密码（Client secret），到 http://developers.douban.com/ 来注册获取"
+    zh_l10n_enable_weibo_logins: "启用微博登录。需要 id 和 secret。"
+    zh_l10n_weibo_client_id: "微博帐号验证的客户端帐号（Client id），到 http://open.weibo.com/ 来注册获取"
+    zh_l10n_weibo_client_secret: "微博帐号验证的客户端密码（Client secret），到 http://open.weibo.com/ 来注册获取"
+    zh_l10n_enable_renren_logins: "启用人人网登录。需要 id 和 secret。"
+    zh_l10n_renren_client_id: "人人帐号验证的客户端帐号（Client id），到 http://dev.renren.com/website 来注册获取"
+    zh_l10n_renren_client_secret: "人人帐号验证的客户端密码（Client secret），到 http://dev.renren.com/website 来注册获取"
+    zh_l10n_enable_qq_logins: "启用 QQ 登录。需要 id 和 secret。"
+    zh_l10n_qq_client_id: "QQ 帐号验证的客户端帐号（Client id），到 http://connect.qq.com/ 来注册获取"
+    zh_l10n_qq_client_secret: "QQ 帐号验证的客户端密码（Client secret），到 http://connect.qq.com/ 来注册获取"
+    zh_l10n_enable_douban_logins: "启用豆瓣登录。需要 id 和 secret。"
+    zh_l10n_douban_client_id: "豆瓣帐号验证的客户端帐号（Client id），到 http://developers.douban.com/ 来注册获取"
+    zh_l10n_douban_client_secret: "豆瓣帐号验证的客户端密码（Client secret），到 http://developers.douban.com/ 来注册获取"
+  dashboard:
+    zh_l10n_weibo_config_warning: '服务器允许使用微博登录（zh_l10n_enable_weibo_logins），但是 client id 和 client secret 没有被设定。 到<a href="/admin/site_settings">站点设置</a>更新此设定。<a href="https://meta.discourse.org/t/configuring-google-login-for-discourse/15858" target="_blank">参考设定指南</a>。'
+    zh_l10n_qq_config_warning: '服务器允许使用 QQ 登录（zh_l10n_enable_qq_logins），但是 client id 和 client secret 没有被设定。 到<a href="/admin/site_settings">站点设置</a>更新此设定。<a href="https://meta.discourse.org/t/configuring-google-login-for-discourse/15858" target="_blank">参考设定指南</a>。'
+    zh_l10n_douban_config_warning: '服务器允许使用豆瓣登录（zh_l10n_enable_douban_logins），但是 client id 和 client secret 没有被设定。 到<a href="/admin/site_settings">站点设置</a>更新此设定。<a href="https://meta.discourse.org/t/configuring-google-login-for-discourse/15858" target="_blank">参考设定指南</a>。'
+    zh_l10n_renren_config_warning: '服务器允许使用人人登录（zh_l10n_enable_renren_logins），但是 client id 和 client secret 没有被设定。 到<a href="/admin/site_settings">站点设置</a>更新此设定。<a href="https://meta.discourse.org/t/configuring-google-login-for-discourse/15858" target="_blank">参考设定指南</a>。'
