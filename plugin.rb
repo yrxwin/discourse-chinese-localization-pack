@@ -4,7 +4,7 @@
 # authors: Erick Guan
 # url: https://github.com/fantasticfears/discourse-chinese-localization-pack
 
-enabled_site_setting :zh_i18n_enabled
+enabled_site_setting :zh_l10n_enabled
 
 register_asset 'stylesheets/auth_providers.scss'
 
@@ -21,7 +21,7 @@ PROVIDERS = [
 ].freeze
 
 after_initialize do
-  if SiteSetting.zh_i18n_enabled
+  if SiteSetting.zh_l10n_enabled
     PROVIDERS.each do |provider|
       auth_provider authenticator: "#{provider[0]}Authenticator".constantize.new,
                     frame_width: provider[1],

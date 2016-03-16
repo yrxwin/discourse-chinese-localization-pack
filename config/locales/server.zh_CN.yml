@@ -2,7 +2,7 @@
 
 zh_CN:
   site_settings:
-    zh_i18n_enabled: 启用中文本地化服务集合。注意：需要重新启动。
+    zh_l10n_enabled: 启用中文本地化服务集合。注意：需要重新启动。
     weibo_client_id: "微博帐号验证的客户端帐号（Client id），到 http://open.weibo.com/ 来注册获取"
     weibo_client_secret: "微博帐号验证的客户端密码（Client secret），到 http://open.weibo.com/ 来注册获取"
     renren_client_id: "人人帐号验证的客户端帐号（Client id），到 http://dev.renren.com/website 来注册获取"

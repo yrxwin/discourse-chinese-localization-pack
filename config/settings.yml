@@ -16,21 +16,21 @@ login:
   douban_client_secret:
     default: ''
 plugins:
-  zh_i18n_enabled:
+  zh_l10n_enabled:
     default: true
-  zh_i18n_weibo_client_id:
+  zh_l10n_weibo_client_id:
     default: ''
-  zh_i18n_weibo_client_secret:
+  zh_l10n_weibo_client_secret:
     default: ''
-  zh_i18n_renren_client_id:
+  zh_l10n_renren_client_id:
     default: ''
-  zh_i18n_renren_client_secret:
+  zh_l10n_renren_client_secret:
     default: ''
-  zh_i18n_qq_connect_client_id:
+  zh_l10n_qq_connect_client_id:
     default: ''
-  zh_i18n_qq_connect_client_secret:
+  zh_l10n_qq_connect_client_secret:
     default: ''
-  zh_i18n_douban_client_id:
+  zh_l10n_douban_client_id:
     default: ''
-  zh_i18n_douban_client_secret:
+  zh_l10n_douban_client_secret:
     default: ''
