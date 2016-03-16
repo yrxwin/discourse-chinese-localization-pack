@@ -20,6 +20,7 @@ PROVIDERS = [
   ['Renren', 950, 500, 'rgb(0, 94, 172)']
 ].freeze
 PLUGIN_PREFIX = 'zh_l10n_'.freeze
+SITE_SETTING_NAME = 'zh_l10n_enabled'.freeze
 
 PROVIDERS.each do |provider|
   auth_provider authenticator: "#{provider[0]}Authenticator".constantize.new,
@@ -46,5 +47,11 @@ after_initialize do
       end
     end
     AdminDashboardData.add_problem_check check
+  end
+
+  DiscourseEvent.on(:site_setting_saved) do |site_setting|
+    if site_setting.name == SITE_SETTING_NAME && site_setting.value_changed? && site_setting.value == false
+      PROVIDERS.each { |provider| SiteSetting.public_send("#{PLUGIN_PREFIX}enable_#{provider.downcase}_logins", false) }
+    end
   end
 end

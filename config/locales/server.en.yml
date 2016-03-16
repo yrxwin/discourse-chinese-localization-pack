@@ -2,7 +2,7 @@
 
 en:
   site_settings:
-    zh_l10n_enabled: "Enable Chinese localization pack. NOTE: requires restart."
+    zh_l10n_enabled: "Enable Chinese localization pack."
     zh_l10n_weibo_client_id: "Client id for Weibo authentication, registered at http://open.weibo.com/"
     zh_l10n_weibo_client_secret: "Client secret for Weibo authentication, registered at http://open.weibo.com/"
     zh_l10n_renren_client_id: "Client id for Renren authentication, registered at http://dev.renren.com/website"
