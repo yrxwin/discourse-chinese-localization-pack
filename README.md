@@ -10,6 +10,8 @@ Adding various support to login methods and share links. More incoming.
 - 包含各国内服务的第三方登录（OAuth）功能。
 - 添加分享到国内的服务的支持。
 
+更多技术支持或者意见问题，可以参考[中文论坛的帮助贴][dsch]。
+
 ## 功能概况
 
 登录方法：
@@ -48,7 +50,7 @@ Adding various support to login methods and share links. More incoming.
 
 ## 使用
 
-进入站点设置的插件设置项里按照提示设置，或按照中文论坛的帮助贴。
+进入站点设置的插件设置项里按照提示设置，或按照[中文论坛的帮助贴][dsch]。
 
 另外在 `share_links` 设置项中输入对应的名字（括号内）添加分享服务。
 
@@ -84,3 +86,4 @@ GPLv2
 
 [discn]: https://meta.discoursecn.org/
 [dsg]: https://github.com/discourse/discourse
+[dsch]: https://meta.discoursecn.org/t/Discourse-%E4%B8%AD%E6%96%87%E6%9C%AC%E5%9C%B0%E5%8C%96%E6%9C%8D%E5%8A%A1%E9%9B%86%E5%90%88/1012
