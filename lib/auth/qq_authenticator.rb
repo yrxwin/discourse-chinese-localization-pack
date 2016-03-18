@@ -1,5 +1,4 @@
 class QQAuthenticator < ::Auth::Authenticator
-
   def name
     'qq_connect'
   end
