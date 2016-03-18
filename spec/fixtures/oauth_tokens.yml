@@ -40,7 +40,8 @@ qq:
     :expires_at: 1331780640
     :expires: true
   :extra:
-    :raw_info: {}
+    :raw_info:
+      :dummy: test
 renren:
   :provider: renren
   :uid: '123456789'

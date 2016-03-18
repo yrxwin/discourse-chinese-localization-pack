@@ -15,10 +15,13 @@ class QQAuthenticator < ::Auth::Authenticator
 
     current_info = ::PluginStore.get('qq', "qq_uid_#{qq_uid}")
 
-    result.user =
-      if current_info
-        User.where(id: current_info[:user_id]).first
-      end
+    if current_info
+      result.user = User.where(id: current_info[:user_id]).first
+    else
+      current_info = Hash.new
+    end
+    current_info.store(:raw_info, raw_info)
+    ::PluginStore.set('qq', "qq_uid_#{qq_uid}", current_info)
 
     result.name = name
     result.username = username
@@ -29,7 +32,8 @@ class QQAuthenticator < ::Auth::Authenticator
 
   def after_create_account(user, auth)
     qq_uid = auth[:extra_data][:qq_uid]
-    ::PluginStore.set('qq', "qq_uid_#{qq_uid}", {user_id: user.id})
+    current_info = ::PluginStore.get('qq', "qq_uid_#{qq_uid}") || {}
+    ::PluginStore.set('qq', "qq_uid_#{qq_uid}", current_info.merge({user_id: user.id}))
   end
 
   def register_middleware(omniauth)

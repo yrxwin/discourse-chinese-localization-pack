@@ -8,16 +8,19 @@ class WeiboAuthenticator < ::Auth::Authenticator
     result = Auth::Result.new
 
     data = auth_token[:info]
-    email = auth_token[:extra][:email]
-    raw_info = auth_token[:extra][:raw_info].slice(%i[screen_name verified])
+    email = auth_token[:extra][:email] || "#{data['nickname']}@"
+    raw_info = auth_token[:extra][:raw_info]
     weibo_uid = auth_token[:uid]
 
     current_info = ::PluginStore.get('weibo', "weibo_uid_#{weibo_uid}")
 
-    result.user =
-      if current_info
-        User.where(id: current_info[:user_id]).first
-      end
+    if current_info
+      result.user = User.where(id: current_info[:user_id]).first
+    else
+      current_info = Hash.new
+    end
+    current_info.store(:raw_info, raw_info)
+    ::PluginStore.set('weibo', "weibo_uid_#{weibo_uid}", current_info)
 
     result.name = data['name']
     result.username = data['nickname']
@@ -29,7 +32,8 @@ class WeiboAuthenticator < ::Auth::Authenticator
 
   def after_create_account(user, auth)
     weibo_uid = auth[:extra_data][:weibo_uid]
-    ::PluginStore.set('weibo', "weibo_uid_#{weibo_uid}", {user_id: user.id})
+    current_info = ::PluginStore.get('weibo', "weibo_uid_#{weibo_uid}") || {}
+    ::PluginStore.set('weibo', "weibo_uid_#{weibo_uid}", current_info.merge(user_id: user.id))
   end
 
   def register_middleware(omniauth)

@@ -10,15 +10,27 @@ describe WeiboAuthenticator do
   let(:key) { "weibo_uid_#{hash[:uid]}" }
 
   context '.after_authenticate' do
-    it 'can authenticate and create a user record for already existing users' do
-      authenticator = described_class.new
-      user = Fabricate(:user)
+    context 'with existing weibo login record' do
+      before { PluginStore.set('weibo', key, {user_id: user.id}) }
+      after { PluginStore.remove('weibo', key) }
+      let(:user) { Fabricate(:user) }
 
-      PluginStore.set('weibo', key, {user_id: user.id})
-      result = authenticator.after_authenticate(hash)
-      PluginStore.remove('weibo', key)
+      it 'can authenticate existing user given weibo uid' do
+        authenticator = described_class.new
 
-      expect(result.user.id).to eq(user.id)
+        result = authenticator.after_authenticate(hash)
+
+        expect(result.user.id).to eq(user.id)
+      end
+
+      it 'can store additional information' do
+        authenticator = described_class.new
+
+        authenticator.after_authenticate(hash)
+
+        expect(PluginStore.get('weibo', key)[:raw_info]).to be_a(Hash)
+        expect(PluginStore.get('weibo', key)[:raw_info][:city]).to eq('广州')
+      end
     end
 
     it 'can create a proper result for non existing users' do
@@ -31,15 +43,31 @@ describe WeiboAuthenticator do
   end
 
   context '.after_create_account' do
-    it 'save weibo uid in plugin store' do
-      authenticator = described_class.new
-      user = Fabricate(:user)
+    let(:user) { Fabricate(:user) }
+    context 'with existing plugin record' do
+      before { PluginStore.set('weibo', key, {user_id: user.id, raw_info: 1}) }
+      after { PluginStore.remove('weibo', key) }
 
-      PluginStore.remove('weibo', key)
-      expect(PluginStore.get('weibo', key)).to be_nil
-      authenticator.after_create_account(user, { extra_data: { weibo_uid: hash[:uid] }})
+      it 'merge weibo uid in plugin store' do
+        authenticator = described_class.new
 
-      expect(PluginStore.get('weibo', key)).to eq({"user_id" => user.id})
+        authenticator.after_create_account(user, { extra_data: { weibo_uid: hash[:uid] }})
+
+        expect(PluginStore.get('weibo', key)).to eq({"user_id" => user.id, "raw_info" => 1})
+      end
+    end
+
+    context 'without existing plugin record' do
+      before { PluginStore.remove('weibo', key) }
+      after { PluginStore.remove('weibo', key) }
+
+      it 'creates record in plugin store' do
+        authenticator = described_class.new
+
+        authenticator.after_create_account(user, { extra_data: { weibo_uid: hash[:uid] }})
+
+        expect(PluginStore.get('weibo', key)).to eq({"user_id" => user.id})
+      end
     end
   end
 end
