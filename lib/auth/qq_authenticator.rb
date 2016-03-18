@@ -22,7 +22,7 @@ class QQAuthenticator < ::Auth::Authenticator
 
     result.name = name
     result.username = username
-    result.extra_data = { qq_uid: qq_uid, raw_info: raw_info }
+    result.extra_data = { qq_uid: qq_uid }
 
     result
   end

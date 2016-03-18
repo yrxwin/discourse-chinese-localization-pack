@@ -22,7 +22,7 @@ class WeiboAuthenticator < ::Auth::Authenticator
     result.name = data['name']
     result.username = data['nickname']
     result.email = email
-    result.extra_data = { weibo_uid: weibo_uid, raw_info: raw_info }
+    result.extra_data = { weibo_uid: weibo_uid }
 
     result
   end
