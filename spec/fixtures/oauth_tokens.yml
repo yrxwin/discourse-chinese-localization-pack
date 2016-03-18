@@ -1,0 +1,96 @@
+weibo:
+  :provider: weibo
+  :uid: '1234567890'
+  :info:
+    :nickname: beenhero
+    :name: beenhero
+    :location: "浙江 杭州"
+    :image: http://tp4.sinaimg.cn/1640099215/50/1287016234/1
+    :description: "移步twitter@beenhero"
+    :urls:
+      :Blog: http://beenhero.com
+      :Weibo: http://weibo.com/beenhero
+  :credentials:
+    :token: 2.00JjgzmBd7F...
+    :expires_at: 1331780640
+    :expires: true
+  :extra:
+    :raw_info:
+      :subscribe: 1
+      :uid: '123123123'
+      :nickname: punk
+      :sex: 1
+      :language: zh_CN
+      :city: "广州"
+      :province: "广东"
+      :country: "中国"
+      :headimgurl: xxx
+      :headimgurl_large: xxx
+      :headimgurl_hd: xxx
+      :follow: '1'
+      :subscribe_time: 1382694957
+qq:
+  :provider: qq_connect
+  :uid: 1D341A5F76CD6CE74C3A664F8565D4B42D
+  :info:
+    :nickname: beenhero
+    :image: http://qzapp.qlogo.cn/qzapp/100250034/1D341A5F76CD6CE74C3A664F8565D4B42D/50
+  :credentials:
+    :token: 2.00JjgzmBd7F...
+    :expires_at: 1331780640
+    :expires: true
+  :extra:
+    :raw_info: {}
+renren:
+  :provider: renren
+  :uid: '123456789'
+  :info:
+    :name: test
+    :nickname: test
+    :image: http://hdn.xnimg.cn/photos/1.jpg
+    :urls:
+      :Renren: http://www.renren.com/222159293/profile
+  :credentials:
+    :token: 230086|32csdfg435...
+    :refresh_token: 230086|32csdfg435...
+    :expires_at: 1366628401
+    :expires: true
+  :extra:
+    :raw_info:
+      :uid: '123456789'
+      :avatar:
+      - :size: TINY
+        :url: http://hdn.xnimg.cn/photos/1.jpg
+      :name: test
+      :star: 0
+      :basicInformation:
+        :sex: MALE
+        :birthday: 1900-0-0
+douban:
+  :provider: douban
+  :uid: '2217855'
+  :info:
+    :name: "小松其实还没有"
+    :nickname: xiaosong
+    :location: "陕西西安"
+    :image: http://img3.douban.com/icon/u2217855-34.jpg
+    :urls:
+      :alt: http://www.douban.com/people/xiaosong/
+    :description: "你确实知道就必须证明"
+  :credentials:
+    :token: 6516f0d........
+    :refresh_token: 30c8c560..........
+    :expires_at: 1357053699
+    :expires: true
+  :extra:
+    :raw_info:
+      :loc_id: '118371'
+      :name: "小松其实还没有"
+      :created: '2008-02-05 15:26:44'
+      :loc_name: "陕西西安"
+      :avatar: http://img3.douban.com/icon/u2217855-34.jpg
+      :signature: "啊我要增肥..."
+      :uid: xiaosong
+      :alt: http://www.douban.com/people/xiaosong/
+      :id: '2217855'
+      :desc: "你确实知道就必须证明"

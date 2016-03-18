@@ -28,7 +28,7 @@ class RenrenAuthenticator < ::Auth::Authenticator
   end
 
   def after_create_account(user, auth)
-    renren_uid = auth[:extra_data][:uid]
+    renren_uid = auth[:extra_data][:renren_uid]
     ::PluginStore.set('renren', "renren_uid_#{renren_uid}", {user_id: user.id})
   end
 

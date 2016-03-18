@@ -28,7 +28,7 @@ class WeiboAuthenticator < ::Auth::Authenticator
   end
 
   def after_create_account(user, auth)
-    weibo_uid = auth[:extra_data][:uid]
+    weibo_uid = auth[:extra_data][:weibo_uid]
     ::PluginStore.set('weibo', "weibo_uid_#{weibo_uid}", {user_id: user.id})
   end
 

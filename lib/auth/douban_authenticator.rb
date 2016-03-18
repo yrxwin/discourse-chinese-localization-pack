@@ -28,7 +28,7 @@ class DoubanAuthenticator < ::Auth::Authenticator
   end
 
   def after_create_account(user, auth)
-    douban_uid = auth[:extra_data][:uid]
+    douban_uid = auth[:extra_data][:douban_uid]
     ::PluginStore.set('douban', "douban_uid_#{douban_uid}", {user_id: user.id})
   end
 
