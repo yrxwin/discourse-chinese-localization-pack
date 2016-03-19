@@ -95,3 +95,27 @@ douban:
       :alt: http://www.douban.com/people/xiaosong/
       :id: '2217855'
       :desc: "你确实知道就必须证明"
+wechat:
+  :provider: wechat
+  :uid: '123456789'
+  :info:
+    :nickname: Nickname
+    :sex: 1
+    :province: Changning
+    :city: Shanghai
+    :country: China
+    :headimgurl: http://image_url
+  :credentials:
+    :token: token
+    :refresh_token: another_token
+    :expires_at: 7200
+    :expires: true
+  :extra:
+    :raw_info:
+      :openid: openid
+      :nickname: Nickname
+      :sex: 1
+      :province: Changning
+      :city: Shanghai
+      :country: China
+      :headimgurl: http://image_url

@@ -9,12 +9,12 @@ plugins:
     default: ''
   zh_l10n_weibo_client_secret:
     default: ''
-  zh_l10n_enable_renren_logins:
+  zh_l10n_enable_wechat_logins:
     default: false
     client: true
-  zh_l10n_renren_client_id:
+  zh_l10n_wechat_client_id:
     default: ''
-  zh_l10n_renren_client_secret:
+  zh_l10n_wechat_client_secret:
     default: ''
   zh_l10n_enable_qq_logins:
     default: false
@@ -22,6 +22,13 @@ plugins:
   zh_l10n_qq_client_id:
     default: ''
   zh_l10n_qq_client_secret:
+    default: ''
+  zh_l10n_enable_renren_logins:
+    default: false
+    client: true
+  zh_l10n_renren_client_id:
+    default: ''
+  zh_l10n_renren_client_secret:
     default: ''
   zh_l10n_enable_douban_logins:
     default: false
