@@ -3,19 +3,19 @@
 zh_CN:
   site_settings:
     zh_l10n_enabled: 启用中文本地化服务集合。
-    zh_l10n_enable_weibo_logins: "启用微博登录。需要 id 和 secret。"
+    zh_l10n_enable_weibo_logins: "启用微博登录。需要 id 和 secret。接入登录相关指南 https://meta.discoursecn.org/weibo-login-guide"
     zh_l10n_weibo_client_id: "微博帐号验证的客户端帐号（Client id），到 http://open.weibo.com/ 来注册获取"
     zh_l10n_weibo_client_secret: "微博帐号验证的客户端密码（Client secret），到 http://open.weibo.com/ 来注册获取"
-    zh_l10n_enable_renren_logins: "启用人人网登录。需要 id 和 secret。"
+    zh_l10n_enable_renren_logins: "启用人人网登录。需要 id 和 secret。接入登录相关指南 https://meta.discoursecn.org/renren-login-guide"
     zh_l10n_renren_client_id: "人人帐号验证的客户端帐号（Client id），到 http://dev.renren.com/website 来注册获取"
     zh_l10n_renren_client_secret: "人人帐号验证的客户端密码（Client secret），到 http://dev.renren.com/website 来注册获取"
-    zh_l10n_enable_qq_logins: "启用 QQ 登录。需要 id 和 secret。"
+    zh_l10n_enable_qq_logins: "启用 QQ 登录。需要 id 和 secret。接入登录相关指南 https://meta.discoursecn.org/qq-login-guide"
     zh_l10n_qq_client_id: "QQ 帐号验证的客户端帐号（Client id），到 http://connect.qq.com/ 来注册获取"
     zh_l10n_qq_client_secret: "QQ 帐号验证的客户端密码（Client secret），到 http://connect.qq.com/ 来注册获取"
-    zh_l10n_enable_douban_logins: "启用豆瓣登录。需要 id 和 secret。"
+    zh_l10n_enable_douban_logins: "启用豆瓣登录。需要 id 和 secret。接入登录相关指南 https://meta.discoursecn.org/douban-login-guide"
     zh_l10n_douban_client_id: "豆瓣帐号验证的客户端帐号（Client id），到 http://developers.douban.com/ 来注册获取"
     zh_l10n_douban_client_secret: "豆瓣帐号验证的客户端密码（Client secret），到 http://developers.douban.com/ 来注册获取"
-    zh_l10n_enable_wechat_logins: "启用微信公众平台登录。需要 id 和 secret。"
+    zh_l10n_enable_wechat_logins: "启用微信公众平台登录。需要 id 和 secret。接入登录相关指南 https://meta.discoursecn.org/wechat-login-guide"
     zh_l10n_wechat_client_id: "微信公众平台帐号验证的客户端帐号（Client id），到 https://open.weixin.qq.com/ 来注册获取"
     zh_l10n_wechat_client_secret: "微信公众平台帐号验证的客户端密码（Client secret），到 https://open.weixin.qq.com/ 来注册获取"
   dashboard:
