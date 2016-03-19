@@ -5,7 +5,8 @@ require 'omniauth/strategies/oauth2'
 # part of gem 'omniauth-qq' 0.3.0; https://github.com/beenhero/omniauth-qq
 # gem 'omniauth-renren-oauth2' 0.0.6; https://github.com/yeeli/omniauth-renren-oauth2
 # firstly import from gem 'omniauth-weibo-oauth2' 5108f7b318fb014b9778dddd3bfee9a2d5007996; https://github.com/beenhero/omniauth-weibo-oauth2
-# now managed by Erick Guan
+# now modified and managed by Erick Guan
+# gem 'omniauth-wechat-oauth2' 1.0; https://github.com/skinnyworm/omniauth-wechat-oauth2
 
 class OmniAuth::Strategies::Douban < OmniAuth::Strategies::OAuth2
   DEFAULT_SCOPE = 'douban_basic_common,shuo_basic_r,shuo_basic_w'

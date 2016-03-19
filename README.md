@@ -16,8 +16,13 @@ More Chinese localization support for Discourse.
 
 登录方法：
 
-| 微博 | 人人 | 豆瓣 | QQ |
-| 微信开放平台 |
+| 支持的登录服务 | 指南 | 备注 |
+| --- | ---- | ----- |
+| 微博 | [配置微博登录指南][loginweibo] | |
+| 人人 | [配置人人登录指南][loginrenren] |
+| 豆瓣 | [配置豆瓣登录指南][logindouban] |
+| QQ | [配置 QQ 登录指南][loginqq] |
+| 微信开放平台 | [配置微信公众平台登录指南][loginwechat] | 实验性支持，数据结构可能改变，会破坏兼容性 |
 
 分享链接：
 
@@ -87,3 +92,9 @@ GPLv2
 [discn]: https://meta.discoursecn.org/
 [dsg]: https://github.com/discourse/discourse
 [dsch]: https://meta.discoursecn.org/t/Discourse-%E4%B8%AD%E6%96%87%E6%9C%AC%E5%9C%B0%E5%8C%96%E6%9C%8D%E5%8A%A1%E9%9B%86%E5%90%88/1012
+
+[logindouban]: https://meta.discoursecn.org/t/%E9%85%8D%E7%BD%AE%E7%94%A8%E8%B1%86%E7%93%A3%E8%B4%A6%E5%8F%B7%E7%99%BB%E5%BD%95-Discourse/1020
+[loginrenren]: https://meta.discoursecn.org/t/%E9%85%8D%E7%BD%AE%E7%94%A8%E4%BA%BA%E4%BA%BA%E8%B4%A6%E5%8F%B7%E7%99%BB%E5%BD%95-Discourse/1021
+[loginqq]: https://meta.discoursecn.org/t/%E9%85%8D%E7%BD%AE%E7%94%A8-QQ-%E8%B4%A6%E5%8F%B7%E7%99%BB%E5%BD%95-Discourse/1022
+[loginweibo]: https://meta.discoursecn.org/t/%E9%85%8D%E7%BD%AE%E7%94%A8%E5%BE%AE%E5%8D%9A%E8%B4%A6%E5%8F%B7%E7%99%BB%E5%BD%95-Discourse/1024
+[loginwechat]: https://meta.discoursecn.org/t/%E9%85%8D%E7%BD%AE%E7%94%A8%E5%BE%AE%E4%BF%A1%E8%B4%A6%E5%8F%B7%EF%BC%88%E5%BE%AE%E4%BF%A1%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0%EF%BC%89%E7%99%BB%E5%BD%95-Discourse/1025
