@@ -9,7 +9,7 @@ class WeiboAuthenticator < ::Auth::Authenticator
     result = Auth::Result.new
 
     data = auth_token[:info]
-    email = auth_token[:extra][:email] || "#{data['nickname'].downcase}@sina.com"
+    email = auth_token[:extra][:email]
     raw_info = auth_token[:extra][:raw_info]
     weibo_uid = auth_token[:uid]
 
@@ -25,7 +25,11 @@ class WeiboAuthenticator < ::Auth::Authenticator
 
     result.name = data['name']
     result.username = data['nickname']
-    result.email = email
+    if email
+      result.email = email
+    else
+      result.email = "#{data['name']}@sina.com" if data['name']
+    end
     result.extra_data = { weibo_uid: weibo_uid }
 
     result

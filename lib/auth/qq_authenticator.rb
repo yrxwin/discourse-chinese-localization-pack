@@ -23,7 +23,7 @@ class QQAuthenticator < ::Auth::Authenticator
     ::PluginStore.set('qq', "qq_uid_#{qq_uid}", current_info)
 
     result.name = name
-    result.email = "#{name.downcase}@qq.com"
+    result.email = "#{name.downcase}@qq.com" if name
     result.username = username
     result.extra_data = { qq_uid: qq_uid }
 
