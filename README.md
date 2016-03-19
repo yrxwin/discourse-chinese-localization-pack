@@ -1,7 +1,7 @@
 Discourse 中文本地化服务集合
 ===================
 
-Adding various support to login methods and share links. More incoming.
+More Chinese localization support for Discourse.
 
 <strong>将随 Discourse 1.5 正式版取代原来的相关的插件，Discourse 1.6 版本发布时原先的几个相关插件将被删除。测试中</strong>
 
@@ -10,27 +10,27 @@ Adding various support to login methods and share links. More incoming.
 - 包含各国内服务的第三方登录（OAuth）功能。
 - 添加分享到国内的服务的支持。
 
-更多技术支持或者意见问题，可以参考[中文论坛的帮助贴][dsch]。
+更多技术支持或者意见问题，可以参考[中文论坛的帮助贴][dsch]。帮助帖中还包括了各个功能的配置指南。
 
 ## 功能概况
 
 登录方法：
 
-- 微博
-- 人人
-- 豆瓣
-- QQ
+| 微博 | 人人 | 豆瓣 | QQ |
+| 微信开放平台 |
 
 分享链接：
 
 （有部分服务的显示尚未有更好的解决办法）
 
-- 微博（weibo）
-- 人人（renren）
-- 腾讯微博（tencent_weibo）
-- 豆瓣（douban）：需要图标
-- 微信（wechat）：第三方服务，需要替代品
-- QQ 空间（qzone）：需要图标
+| 分享平台 | 后台代码 | 备注问题 |
+| --- | ---------- | --------------- |
+| 微博 | weibo |  |
+| 人人 | renren |  |
+| 腾讯微博 | tencent_weibo |  |
+| 豆瓣 | douban | 需要图标 |
+| 微信 | wechat | 第三方服务，需要替代品 |
+| QQ 空间 | qzone | 需要图标 |
 
 ## 安装
 
@@ -60,7 +60,7 @@ GPLv2
 
 ## 贡献
 
-欢迎你参与这样本地化服务插件的开发，
+欢迎你参与本地化服务插件的开发，
 
 - 前往[中文论坛][discn]讨论任何可能的想法，尽可能地列举出具体的做法或详情。
 - 提交 Pull Request。
@@ -80,9 +80,9 @@ GPLv2
 
 至此，迁移就完成了，所有原来保存的登录数据都不会受到影响。
 
-## TODO
+## Developer notes
 
-合并微信插件 https://github.com/mooosu/wechat_qrconnect
+1. Simplified Chinese is the source language in the plugin. Other translations are welcomed if you need them to work.
 
 [discn]: https://meta.discoursecn.org/
 [dsg]: https://github.com/discourse/discourse
