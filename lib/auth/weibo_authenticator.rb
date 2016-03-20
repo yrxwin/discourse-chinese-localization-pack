@@ -25,11 +25,8 @@ class WeiboAuthenticator < ::Auth::Authenticator
 
     result.name = data['name']
     result.username = data['nickname']
-    if email
-      result.email = email
-    else
-      result.email = "#{data['name']}@sina.com" if data['name']
-    end
+    result.email = email
+
     result.extra_data = { weibo_uid: weibo_uid }
 
     result

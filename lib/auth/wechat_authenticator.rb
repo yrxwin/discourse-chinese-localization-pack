@@ -24,7 +24,6 @@ class WechatAuthenticator < ::Auth::Authenticator
     ::PluginStore.set(AUTHENTICATOR_NAME, "wechat_uid_#{wechat_uid}", current_info)
 
     result.username = name.downcase
-    result.email = "#{name.downcase}@qq.com" unless name.blank?
     result.extra_data = { wechat_uid: wechat_uid }
 
     result
