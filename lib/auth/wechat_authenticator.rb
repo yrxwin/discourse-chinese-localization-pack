@@ -10,7 +10,7 @@ class WechatAuthenticator < ::Auth::Authenticator
 
     data = auth_token[:info]
     raw_info = auth_token[:extra][:raw_info]
-    name = data[:nickname]
+    name = data[:nickname] || ''
     wechat_uid = auth_token[:uid]
 
     current_info = ::PluginStore.get(AUTHENTICATOR_NAME, "wechat_uid_#{wechat_uid}")
@@ -23,10 +23,8 @@ class WechatAuthenticator < ::Auth::Authenticator
     current_info.store(:raw_info, raw_info)
     ::PluginStore.set(AUTHENTICATOR_NAME, "wechat_uid_#{wechat_uid}", current_info)
 
-    # disable since no unicode support now
-    # result.username = name.downcase
-    # result.email = "#{name.downcase}@qq.com" unless name.blank?
-    result.name = name
+    result.username = name.downcase
+    result.email = "#{name.downcase}@qq.com" unless name.blank?
     result.extra_data = { wechat_uid: wechat_uid }
 
     result

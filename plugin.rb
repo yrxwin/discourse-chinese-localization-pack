@@ -1,6 +1,6 @@
 # name: 中文本地化服务集合
 # about: 为 Discourse 增加了各种本地化的功能。
-# version: 0.9
+# version: 0.8
 # authors: Erick Guan
 # url: https://github.com/fantasticfears/discourse-chinese-localization-pack
 

@@ -24,8 +24,12 @@ class WeiboAuthenticator < ::Auth::Authenticator
     ::PluginStore.set(AUTHENTICATOR_NAME, "weibo_uid_#{weibo_uid}", current_info)
 
     result.name = data['name']
-    # result.username = data['nickname'] disable since no unicode support now
-    result.email = email
+    result.username = data['nickname']
+    if email
+      result.email = email
+    else
+      result.email = "#{data['name']}@sina.com" if data['name']
+    end
     result.extra_data = { weibo_uid: weibo_uid }
 
     result
