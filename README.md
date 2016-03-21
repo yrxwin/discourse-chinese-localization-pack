@@ -98,3 +98,7 @@ GPLv2
 [loginqq]: https://meta.discoursecn.org/t/%E9%85%8D%E7%BD%AE%E7%94%A8-QQ-%E8%B4%A6%E5%8F%B7%E7%99%BB%E5%BD%95-Discourse/1022
 [loginweibo]: https://meta.discoursecn.org/t/%E9%85%8D%E7%BD%AE%E7%94%A8%E5%BE%AE%E5%8D%9A%E8%B4%A6%E5%8F%B7%E7%99%BB%E5%BD%95-Discourse/1024
 [loginwechat]: https://meta.discoursecn.org/t/%E9%85%8D%E7%BD%AE%E7%94%A8%E5%BE%AE%E4%BF%A1%E8%B4%A6%E5%8F%B7%EF%BC%88%E5%BE%AE%E4%BF%A1%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0%EF%BC%89%E7%99%BB%E5%BD%95-Discourse/1025
+
+## TODO
+
+- 从 iconfont.cn 上寻觅几枚和 Font Awesome 对齐的图片,修改对应的分享源至图片
