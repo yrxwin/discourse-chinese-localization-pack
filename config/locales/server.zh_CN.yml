@@ -15,7 +15,7 @@ zh_CN:
     zh_l10n_enable_douban_logins: "启用豆瓣登录。需要 id 和 secret。接入登录相关指南 https://meta.discoursecn.org/douban-login-guide"
     zh_l10n_douban_client_id: "豆瓣帐号验证的客户端帐号（Client id），到 http://developers.douban.com/ 来注册获取"
     zh_l10n_douban_client_secret: "豆瓣帐号验证的客户端密码（Client secret），到 http://developers.douban.com/ 来注册获取"
-    zh_l10n_enable_wechat_logins: "启用微信公众平台登录。需要 id 和 secret。接入登录相关指南 https://meta.discoursecn.org/wechat-login-guide"
+    zh_l10n_enable_wechat_logins: "启用微信公众平台登录。需要 id 和 secret。（实验性，将移动到微信集成插件紧密结合）接入登录相关指南 https://meta.discoursecn.org/wechat-login-guide"
     zh_l10n_wechat_client_id: "微信公众平台帐号验证的客户端帐号（Client id），到 https://open.weixin.qq.com/ 来注册获取"
     zh_l10n_wechat_client_secret: "微信公众平台帐号验证的客户端密码（Client secret），到 https://open.weixin.qq.com/ 来注册获取"
     zh_l10n_disable_random_username_sugeestion: "禁用第三方登录随机生成的用户名（仅数字），问题根源是 Discourse 不支持中文用户名"
