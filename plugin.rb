@@ -1,6 +1,6 @@
 # name: 中文本地化服务集合
 # about: 为 Discourse 增加了各种本地化的功能。
-# version: 0.9
+# version: 0.10
 # authors: Erick Guan
 # url: https://github.com/fantasticfears/discourse-chinese-localization-pack
 
@@ -30,6 +30,27 @@ PROVIDERS.each do |provider|
                 background_color: provider[3]
 end
 
+module ::DisableUsernameSuggester
+  def to_client_hash
+    hash = super
+
+    # only catch when a oauth login and a username is random
+    if hash[:auth_provider]
+      match = hash[:username].match(/^\d+$/i)
+
+      if SiteSetting.zh_l10n_disable_random_username_sugeestion && match
+        hash[:username] = nil
+
+        if SiteSetting.enable_names? && SiteSetting.zh_l10n_disable_random_username_sugeestion && match
+          hash[:name] = nil
+        end
+      end
+    end
+
+    hash
+  end
+end
+
 after_initialize do
   next unless SiteSetting.zh_l10n_enabled
 
@@ -54,5 +75,9 @@ after_initialize do
     if site_setting.name == SITE_SETTING_NAME && site_setting.value_changed? && site_setting.value == "f" # false
       PROVIDERS.each { |provider| SiteSetting.public_send("#{PLUGIN_PREFIX}enable_#{provider[0].downcase}_logins=", false) }
     end
+  end
+
+  Auth::Result.class_eval do
+    prepend ::DisableUsernameSuggester
   end
 end

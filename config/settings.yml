@@ -37,3 +37,5 @@ plugins:
     default: ''
   zh_l10n_douban_client_secret:
     default: ''
+  zh_l10n_disable_random_username_sugeestion:
+    default: true
