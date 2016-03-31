@@ -9,6 +9,7 @@ More Chinese localization support for Discourse.
 
 - 包含各国内服务的第三方登录（OAuth）功能。
 - 添加分享到国内的服务的支持。
+- 使用非官方 API 的 Onebox。
 
 更多技术支持或者意见问题，可以参考[中文论坛的帮助贴][dsch]。帮助帖中还包括了各个功能的配置指南。
 
