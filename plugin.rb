@@ -1,6 +1,6 @@
 # name: Discourse 中文本地化服务集合
 # about: 为 Discourse 增加了各种本地化的功能。
-# version: 0.11
+# version: 0.12
 # authors: Erick Guan
 # url: https://github.com/fantasticfears/discourse-chinese-localization-pack
 
@@ -14,7 +14,6 @@ require 'active_support/inflector'
 
 # Name, frame_width, frame_height, background_color
 PROVIDERS = [
-  ['Wechat', 850, 600, 'rgb(146, 230, 73)'],
   ['Weibo', 920, 800, 'rgb(230, 22, 45)'],
   ['QQ', 760, 500, '#51b7ec'],
   ['Douban', 380, 460, 'rgb(42, 172, 94)'],

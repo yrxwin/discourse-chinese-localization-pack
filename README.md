@@ -22,7 +22,6 @@ More Chinese localization support for Discourse.
 | 人人 | [配置人人登录指南][loginrenren] |
 | 豆瓣 | [配置豆瓣登录指南][logindouban] |
 | QQ | [配置 QQ 登录指南][loginqq] |
-| 微信开放平台 | [配置微信公众平台登录指南][loginwechat] | 实验性支持，数据结构可能改变，会破坏兼容性 |
 
 分享链接：
 

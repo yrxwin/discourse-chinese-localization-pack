@@ -9,13 +9,6 @@ plugins:
     default: ''
   zh_l10n_weibo_client_secret:
     default: ''
-  zh_l10n_enable_wechat_logins:
-    default: false
-    client: true
-  zh_l10n_wechat_client_id:
-    default: ''
-  zh_l10n_wechat_client_secret:
-    default: ''
   zh_l10n_enable_qq_logins:
     default: false
     client: true
