@@ -1,6 +1,6 @@
 # name: Discourse 中文本地化服务集合
 # about: 为 Discourse 增加了各种本地化的功能。
-# version: 0.12
+# version: 0.13
 # authors: Erick Guan
 # url: https://github.com/fantasticfears/discourse-chinese-localization-pack
 
@@ -26,7 +26,8 @@ PROVIDERS.each do |provider|
   auth_provider authenticator: "#{provider[0]}Authenticator".constantize.new,
                 frame_width: provider[1],
                 frame_height: provider[2],
-                background_color: provider[3]
+                background_color: provider[3],
+                enabled_setting: "#{PLUGIN_PREFIX}enable_#{provider[0].downcase}_logins"
 end
 
 module ::DisableUsernameSuggester
