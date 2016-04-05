@@ -72,7 +72,7 @@ after_initialize do
 
   DiscourseEvent.on(:site_setting_saved) do |site_setting|
     if site_setting.name == SITE_SETTING_NAME && site_setting.value_changed? && site_setting.value == "f" # false
-      PROVIDERS.each { |provider| SiteSetting.public_send("enable_#{provider[0].downcase}_logins=", false) }
+      PROVIDERS.each { |provider| SiteSetting.public_send("#{PLUGIN_PREFIX}enable_#{provider[0].downcase}_logins=", false) }
     end
   end
 
