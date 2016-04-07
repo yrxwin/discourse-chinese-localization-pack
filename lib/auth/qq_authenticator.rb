@@ -2,7 +2,7 @@ class QQAuthenticator < ::Auth::Authenticator
   AUTHENTICATOR_NAME = 'qq'.freeze
 
   def name
-    'qq_connect'
+    AUTHENTICATOR_NAME
   end
 
   def after_authenticate(auth_token)

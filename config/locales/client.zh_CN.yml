@@ -7,7 +7,7 @@ zh_CN:
       renren:
         title: "使用人人帐号登录"
         message: "使用人人帐号验证登录（请确保没有禁止浏览器弹出对话框）"
-      qq_connect:
+      qq:
         title: "使用 QQ 帐号登录"
         message: "使用 QQ 帐号验证登录（请确保没有禁止浏览器弹出对话框）"
       douban:

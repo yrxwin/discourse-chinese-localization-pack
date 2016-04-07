@@ -1,23 +1,21 @@
 # name: Discourse 中文本地化服务集合
 # about: 为 Discourse 增加了各种本地化的功能。
-# version: 0.13
+# version: 0.14
 # authors: Erick Guan
 # url: https://github.com/fantasticfears/discourse-chinese-localization-pack
 
 enabled_site_setting :zh_l10n_enabled
 
-register_asset 'stylesheets/auth_providers.scss'
-
 # load oauth providers
 load File.expand_path('../lib/auth_providers.rb', __FILE__)
 require 'active_support/inflector'
 
-# Name, frame_width, frame_height, background_color
+# name, frame_width, frame_height, background_color, glyph
 PROVIDERS = [
-  ['Weibo', 920, 800, 'rgb(230, 22, 45)'],
-  ['QQ', 760, 500, '#51b7ec'],
-  ['Douban', 380, 460, 'rgb(42, 172, 94)'],
-  ['Renren', 950, 500, 'rgb(0, 94, 172)']
+  ['Weibo', 920, 800, 'rgb(230, 22, 45)', '\f18a'],
+  ['QQ', 760, 500, '#51b7ec', '\f1d6'],
+  ['Douban', 380, 460, 'rgb(42, 172, 94)', '豆'],
+  ['Renren', 950, 500, 'rgb(0, 94, 172)', '\f18b']
 ].freeze
 PLUGIN_PREFIX = 'zh_l10n_'.freeze
 SITE_SETTING_NAME = 'zh_l10n_enabled'.freeze
@@ -27,6 +25,7 @@ PROVIDERS.each do |provider|
                 frame_width: provider[1],
                 frame_height: provider[2],
                 background_color: provider[3],
+                glyph: provider[4],
                 enabled_setting: "#{PLUGIN_PREFIX}enable_#{provider[0].downcase}_logins"
 end
 

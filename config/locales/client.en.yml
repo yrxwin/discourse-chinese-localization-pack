@@ -9,7 +9,7 @@ en:
       renren:
         title: "with Renren"
         message: "Authenticating with Renren (make sure pop up blockers are not enabled)"
-      qq_connect:
+      qq:
         title: "with QQ"
         message: "Authenticating with QQ (make sure pop up blockers are not enabled)"
       douban:
