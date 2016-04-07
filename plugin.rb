@@ -29,29 +29,10 @@ PROVIDERS.each do |provider|
                 enabled_setting: "#{PLUGIN_PREFIX}enable_#{provider[0].downcase}_logins"
 end
 
-module ::DisableUsernameSuggester
-  def to_client_hash
-    hash = super
-
-    # only catch when a oauth login and a username is random
-    if hash[:auth_provider]
-      match = hash[:username].match(/^\d+$/i)
-
-      if SiteSetting.zh_l10n_disable_random_username_sugeestion && match
-        hash[:username] = nil
-
-        if SiteSetting.enable_names? && SiteSetting.zh_l10n_disable_random_username_sugeestion && match
-          hash[:name] = nil
-        end
-      end
-    end
-
-    hash
-  end
-end
-
 after_initialize do
   next unless SiteSetting.zh_l10n_enabled
+
+  load File.expand_path('../lib/onebox.rb', __FILE__)
 
   PROVIDERS.each do |provider|
     provider_name = provider[0].downcase
@@ -73,6 +54,27 @@ after_initialize do
   DiscourseEvent.on(:site_setting_saved) do |site_setting|
     if site_setting.name == SITE_SETTING_NAME && site_setting.value_changed? && site_setting.value == "f" # false
       PROVIDERS.each { |provider| SiteSetting.public_send("#{PLUGIN_PREFIX}enable_#{provider[0].downcase}_logins=", false) }
+    end
+  end
+
+  module ::DisableUsernameSuggester
+    def to_client_hash
+      hash = super
+
+      # only catch when a oauth login and a username is random
+      if hash[:auth_provider]
+        match = hash[:username].match(/^\d+$/i)
+
+        if SiteSetting.zh_l10n_disable_random_username_sugeestion && match
+          hash[:username] = nil
+
+          if SiteSetting.enable_names? && SiteSetting.zh_l10n_disable_random_username_sugeestion && match
+            hash[:name] = nil
+          end
+        end
+      end
+
+      hash
     end
   end
 
