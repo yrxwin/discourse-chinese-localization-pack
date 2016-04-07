@@ -32,3 +32,5 @@ plugins:
     default: ''
   zh_l10n_disable_random_username_sugeestion:
     default: true
+  zh_l10n_http_onebox_override:
+    default: false

@@ -4,7 +4,7 @@ module Onebox
       include Engine
       include HTML
 
-      matches_regexp(/^(https?:\/\/)?([\da-z\.-]+)(bilibili.com\/)video\/(.)+\/?$/)
+      matches_regexp(/^https?:\/\/(?:www\.)?bilibili\.com\/video\/([a-z0-9]+)\/?$/)
 
       # Try to get the video ID. Works for URLs of the form:
       # * http://www.bilibili.com/video/av4235068/
@@ -24,14 +24,6 @@ module Onebox
       def placeholder_html
         to_html
       end
-
-      private
-
-      # Note: May throw! Make sure to rescue.
-      def uri
-        @_uri ||= URI(@url)
-      end
-
     end
   end
 end
