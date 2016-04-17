@@ -55,8 +55,8 @@ class OmniAuth::Strategies::Douban < OmniAuth::Strategies::OAuth2
   end
 end
 
-class OmniAuth::Strategies::QQConnect < OmniAuth::Strategies::OAuth2
-  option :name, "qq_connect"
+class OmniAuth::Strategies::Qq < OmniAuth::Strategies::OAuth2
+  option :name, "qq"
 
   option :client_options, {
     :site => 'https://graph.qq.com/oauth2.0/',
@@ -228,4 +228,3 @@ class OmniAuth::Strategies::Weibo < OmniAuth::Strategies::OAuth2
   end
 end
 
-OmniAuth.config.add_camelization 'qq_connect', 'QQConnect'
