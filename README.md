@@ -3,8 +3,6 @@ Discourse 中文本地化服务集合
 
 More Chinese localization support for Discourse.
 
-<strong>将随 Discourse 1.5 正式版取代原来的相关的插件，Discourse 1.6 版本发布时原先的几个相关插件将被删除。测试中</strong>
-
 这是一个 Discourse 中文本地化插件的集合，一些特性适合增加到 [Discourse 的核心代码库][dsg]中，而这个插件专注于不适用于 Discourse 核心的功能。
 
 - 包含各国内服务的第三方登录（OAuth）功能。
